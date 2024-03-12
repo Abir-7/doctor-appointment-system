@@ -1,0 +1,8 @@
+.scrollStyle::-webkit-scrollbar {
+  background-color: rgb(220, 38, 38);
+  height: 10px;
+}
+
+.scrollStyle::-webkit-scrollbar-thumb {
+  background-color: rgb(167, 33, 33);
+}

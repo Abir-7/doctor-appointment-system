@@ -1,0 +1,13 @@
+.sectionHeaderBorder {
+  overflow: hidden;
+  text-wrap: nowrap;
+  animation: sectionHeaderBorder .5s linear forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@keyframes sectionHeaderBorder {
+  to {opacity: 1;
+    transform: translateY(0px);
+  }
+}
