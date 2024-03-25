@@ -5,7 +5,7 @@ const SingleTableData = ({day,time}:{day:string,time:string}) => {
   return (
     <div>
     <div className="flex justify-center mb-2">
-        <Image className="border p-0.5 border-red-500"
+        <Image className="border p-0.5 border-blue-500"
           style={{
             objectFit: "cover",
             objectPosition: "100% 100%",
@@ -18,7 +18,7 @@ const SingleTableData = ({day,time}:{day:string,time:string}) => {
         <h1 className="text-sm">Cardiology</h1>
     </div>
    <div className="flex justify-center">
-   <p className="mx-2 w-auto text-sm border   px-3 border-red-600 rounded-3xl">
+   <p className="mx-2 w-auto text-sm border   px-3 border-blue-500 rounded-3xl">
       9.00 am - 12.00 pm
     </p>
    </div>

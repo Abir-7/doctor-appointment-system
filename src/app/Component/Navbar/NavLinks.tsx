@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect } from "react";
 
 interface NavbarProps {
@@ -10,22 +11,23 @@ const NavLinks = ({ navAction }: NavbarProps) => {
     <>
       <li
         onClick={navAction}
-        className="hover:bg-white  px-3 py-1 duration-300 rounded-md hover:text-red-500 text-white"
+        className="hover:bg-white  px-3 py-1 duration-300 rounded-md hover:text-blue-500 text-white"
       >
-        Home
+       <Link href={'/'}> Home</Link>
       </li>
       <li
         onClick={navAction}
-        className="hover:bg-white  px-3 py-1 duration-300 rounded-md hover:text-red-500 text-white"
+        className="hover:bg-white  px-3 py-1 duration-300 rounded-md hover:text-blue-500 text-white"
+      >
+  <Link href={'/OurDoctors'}>Our Doctors</Link>
+      </li>
+      <li
+        onClick={navAction}
+        className="hover:bg-white  px-3 py-1 duration-300 rounded-md hover:text-blue-500 text-white"
       >
         Contact
       </li>
-      <li
-        onClick={navAction}
-        className="hover:bg-white  px-3 py-1 duration-300 rounded-md hover:text-red-500 text-white"
-      >
-        About Us
-      </li>
+
     </>
   );
 };

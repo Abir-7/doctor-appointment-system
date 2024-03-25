@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className="mx-2 lg:mx-20 grid gap-y-16 gap-10 grid-cols-1 md:grid-cols-2 ">
       <div className=" flex gap-3  flex-col justify-center ">
-        <h1 className="text-3xl text-red-600 font-semibold">About Our Treatments</h1>
+        <h1 className="text-3xl text-blue-500 font-semibold">About Our Treatments</h1>
         <p className="text-justify">
           Discover excellence in healthcare with our comprehensive range of
           treatments. Our dedicated team of skilled professionals employs
@@ -19,8 +19,8 @@ const AboutUs = () => {
           care and innovative treatments.
         </p>
       </div>
-      <div className="flex   mb-10 w-full md:min-h-[500px] items-center md:justify-end justify-center">
-        <div className=" xs:max-w-[250px] border p-2 relative h-[350px] md:me-10">
+      <div className="flex  lg:mt-10  mb-10 w-full md:min-h-[500px] items-center md:justify-end justify-center">
+        <div className=" xs:max-w-[250px] lg:max-w-[400px]  border p-2 relative  xs:h-[350px] lg:h-[450px] md:me-10 lg:me-16">
           <Image
             className="h-full w-full"
             style={{ objectFit: "cover", objectPosition: "60% 100%" }}
@@ -31,7 +31,7 @@ const AboutUs = () => {
             }
             alt="aa"
           ></Image>
-          <div className="max-w-[100px] rounded-lg absolute h-[100px] bottom-[-50px] right-0 xs:right-[-40px] p-0.5 border border-red-600">
+          <div className="max-w-[100px] rounded-lg absolute h-[100px] bottom-[-50px] right-0 xs:right-[-40px] p-0.5 border border-blue-500">
             <Image
               className="h-full w-full"
               style={{
@@ -47,7 +47,7 @@ const AboutUs = () => {
               alt="aa"
             ></Image>
           </div>
-          <div className="max-w-[100px] rounded-lg absolute h-[100px] top-[-50px] xs:left-[-40px] p-0.5 border border-red-600">
+          <div className="max-w-[100px] rounded-lg absolute h-[100px] top-[-50px] xs:left-[-40px] p-0.5 border border-blue-500">
             <Image
               className="h-full w-full"
               style={{

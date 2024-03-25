@@ -15,7 +15,7 @@ const DoctorTimeTable = () => {
   return (
     <div className={` ${styles.scrollStyle} w-full overflow-auto`}>
       <table className="table-fixed min-w-full border-collapse border border-slate-500">
-        <thead className="bg-red-600">
+        <thead className="bg-blue-500">
           <tr className="text-white">
             <th className="border text-nowrap p-2 ">Week / Time</th>
             <th className="border p-2">Saturday</th>
@@ -30,7 +30,7 @@ const DoctorTimeTable = () => {
         <tbody>
           {/* start time 9.00 am */}
           <tr className="">
-            <td className="border text-center font-semibold text-red-600 p-2 ">9.00 am</td>
+            <td className="border text-center font-semibold text-blue-500 p-2 ">9.00 am</td>
             {
                 daysOfWeek.map(day=>    <td key={day} className="border text-nowrap p-2">
                 <SingleTableData day={day} time={'9.00'} ></SingleTableData>
@@ -40,7 +40,7 @@ const DoctorTimeTable = () => {
           </tr>
           {/* start time 12.00 pm */}
           <tr className="">
-            <td className="border text-center font-semibold text-red-600 p-2 ">12.00 pm</td>
+            <td className="border text-center font-semibold text-blue-500 p-2 ">12.00 pm</td>
             {
                 daysOfWeek.map(day=>    <td key={day} className="border text-nowrap p-2">
                 <SingleTableData day={day} time={'9.00'} ></SingleTableData>
@@ -49,7 +49,7 @@ const DoctorTimeTable = () => {
           </tr>
           {/* start time 3.00 pm */}
           <tr className="">
-            <td className="border text-center  p-2 font-semibold text-red-600 ">3.00 pm</td>
+            <td className="border text-center  p-2 font-semibold text-blue-500 ">3.00 pm</td>
             {
                 daysOfWeek.map(day=>    <td key={day} className="border text-nowrap p-2">
                 <SingleTableData day={day} time={'9.00'} ></SingleTableData>
@@ -58,7 +58,7 @@ const DoctorTimeTable = () => {
           </tr>
           {/* start time 6.00 pm */}
           <tr className="">
-            <td className="border text-center font-semibold text-red-600 p-2 ">6.00 pm</td>
+            <td className="border text-center font-semibold text-blue-500 p-2 ">6.00 pm</td>
             {
                 daysOfWeek.map(day=>    <td key={day} className="border text-nowrap p-2">
                 <SingleTableData day={day} time={'9.00'} ></SingleTableData>
@@ -67,7 +67,7 @@ const DoctorTimeTable = () => {
           </tr>
           {/* start time 9.00 pm */}
           <tr className="">
-            <td className="border text-center font-semibold text-red-600 p-2 ">9.00 pm</td>
+            <td className="border text-center font-semibold text-blue-500 p-2 ">9.00 pm</td>
             {
                 daysOfWeek.map(day=>    <td key={day} className="border text-nowrap p-2">
                 <SingleTableData day={day} time={'9.00'} ></SingleTableData>

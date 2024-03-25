@@ -1,31 +1,42 @@
 import Image from "next/image";
 import React from "react";
-import bg from '../../../asset/bg1.jpg'
+import bg from "../../../asset/bg1.jpg";
 
 const Banner = () => {
   return (
     <>
-      <div  className=" mb-2 h-[70vh] sm:h-[80vh] md:h-[90vh] overflow-hidden relative  w-full">
+      <div className=" mb-2 h-[76vh] sm:h-[86vh] md:h-[96vh] overflow-hidden relative  w-full">
+        <div className="flex   w-full h-full">
+          <Image
+            className=" w-full  flex-shrink-0  h-full object-cover"
+            src={bg}
+            alt="background"
+          ></Image>
+          {/* <Image className=" w-full flex-shrink-0  h-full object-cover" src={bg} alt="background"></Image> */}
+        </div>
 
-      <div className="flex   w-full h-full">
-      <Image className=" w-full  flex-shrink-0  h-full object-cover" src={bg} alt="background"></Image>
-      <Image className=" w-full flex-shrink-0  h-full object-cover" src={bg} alt="background"></Image>
-      </div>
-
-    <div className="absolute w-[90%] md:w-[80%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-y-[-70%] lg:translate-y-[-90%] left-[50%] ">
-<h1 className=" text-4xl sm:text-6xl font-bold text-white drop-shadow-lg text-center">Meet The
-Best Doctor</h1>
-<p className="text-center mt-4 text-white">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
-</div>
-<div style={{ filter:'drop-shadow(0px 1px 8px rgba(0, 0, 0, 1))'}} >
-<svg  className=" absolute bottom-[-1px] w-[111%] left-[-10px] z-[20]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 219"><path fill="white" fillOpacity="1"  d="M0,128L60,138.7C120,149,240,171,360,181.3C480,192,600,192,720,181.3C840,171,960,149,1080,144C1200,139,1320,149,1380,154.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-</div>
-<svg  className=" absolute bottom-[-2px] w-[111%] left-[-10px] z-[20]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 219"><path fill="white" fillOpacity="1"  d="M0,128L60,138.7C120,149,240,171,360,181.3C480,192,600,192,720,181.3C840,171,960,149,1080,144C1200,139,1320,149,1380,154.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-
-
-
-{/* <div style={{clipPath:"polygon(100% 100%, 0% 100% , 0.00% 87.01%, 1.00% 86.67%, 2.00% 86.35%, 3.00% 86.05%, 4.00% 85.77%, 5.00% 85.50%, 6.00% 85.26%, 7.00% 85.04%, 8.00% 84.84%, 9.00% 84.67%, 10.00% 84.52%, 11.00% 84.40%, 12.00% 84.30%, 13.00% 84.22%, 14.00% 84.18%, 15.00% 84.16%, 16.00% 84.16%, 17.00% 84.19%, 18.00% 84.25%, 19.00% 84.34%, 20.00% 84.45%, 21.00% 84.58%, 22.00% 84.74%, 23.00% 84.93%, 24.00% 85.13%, 25.00% 85.36%, 26.00% 85.62%, 27.00% 85.89%, 28.00% 86.18%, 29.00% 86.49%, 30.00% 86.82%, 31.00% 87.16%, 32.00% 87.52%, 33.00% 87.89%, 34.00% 88.27%, 35.00% 88.67%, 36.00% 89.07%, 37.00% 89.48%, 38.00% 89.89%, 39.00% 90.31%, 40.00% 90.73%, 41.00% 91.15%, 42.00% 91.57%, 43.00% 91.98%, 44.00% 92.40%, 45.00% 92.80%, 46.00% 93.20%, 47.00% 93.59%, 48.00% 93.97%, 49.00% 94.33%, 50.00% 94.68%, 51.00% 95.02%, 52.00% 95.34%, 53.00% 95.64%, 54.00% 95.92%, 55.00% 96.19%, 56.00% 96.43%, 57.00% 96.65%, 58.00% 96.85%, 59.00% 97.02%, 60.00% 97.17%, 61.00% 97.30%, 62.00% 97.39%, 63.00% 97.47%, 64.00% 97.51%, 65.00% 97.53%, 66.00% 97.53%, 67.00% 97.50%, 68.00% 97.44%, 69.00% 97.35%, 70.00% 97.24%, 71.00% 97.11%, 72.00% 96.95%, 73.00% 96.76%, 74.00% 96.56%, 75.00% 96.33%, 76.00% 96.07%, 77.00% 95.80%, 78.00% 95.51%, 79.00% 95.20%, 80.00% 94.87%, 81.00% 94.53%, 82.00% 94.17%, 83.00% 93.80%, 84.00% 93.42%, 85.00% 93.02%, 86.00% 92.62%, 87.00% 92.21%, 88.00% 91.80%, 89.00% 91.38%, 90.00% 90.96%, 91.00% 90.54%, 92.00% 90.12%, 93.00% 89.71%, 94.00% 89.29%, 95.00% 88.89%, 96.00% 88.49%, 97.00% 88.10%, 98.00% 87.72%, 99.00% 87.36%, 100.00% 87.01%)"}} className="bg-white h-full object-cover w-[222%] sm:w-[202%] lg:w-[102%] left-0 absolute bottom-[-10px] z-[20]">
-</div> */}
+        <div className="absolute w-[90%] md:w-[80%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-y-[-70%] lg:translate-y-[-90%] left-[50%] ">
+          <h1 className=" text-4xl sm:text-6xl font-bold text-white drop-shadow-lg text-center">
+            Meet The Best Doctor
+          </h1>
+          <p className="text-center mt-4 text-white">
+            Great doctor if you need your family member to get effective
+            immediate assistance, emergency treatment or a simple consultation.
+          </p>
+        </div>
+        <div style={{ filter: "drop-shadow(0px 10px 10px rgba(0, 0, 0, 1))" }}>
+          <svg
+            className=" absolute bottom-[-1px] w-[111%] left-[-10px] z-[20]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 219"
+          >
+            <path
+              fill="white"
+              fillOpacity="1"
+              d="M0,128L60,138.7C120,149,240,171,360,181.3C480,192,600,192,720,181.3C840,171,960,149,1080,144C1200,139,1320,149,1380,154.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
       </div>
     </>
   );

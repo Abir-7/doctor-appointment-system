@@ -28,7 +28,7 @@ const SectionHeader = ({headerText}:Props) => {
 
   console.log(isVisible)
   return (
-    <div ref={elementRef} className=' text-2xl sm:text-3xl  text-red-600 font-semibold text-center'><h1 className={`${isVisible ? styles.sectionHeaderBorder:''}  border-4 px-5 rounded-3xl inline-block  border-r-0 border-l-0 border-t-0 border-b-red-600 `}>{headerText}</h1></div>
+    <div ref={elementRef} className=' text-2xl sm:text-3xl  text-blue-500 font-semibold text-center'><h1 className={`${isVisible ? styles.sectionHeaderBorder:''}  border-4 px-5 rounded-3xl inline-block  border-r-0 border-l-0 border-t-0 border-b-blue-500 `}>{headerText}</h1></div>
   )
 }
 

@@ -9,3 +9,43 @@
 
 
 
+.custom-date-picker {
+  font-family: Arial, sans-serif;
+  width: 200px;
+}
+
+.date-input-container {
+  position: relative;
+}
+
+#date-picker {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.date-picker-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.date-picker {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.date-picker-header {
+  background-color: #f0f0f0;
+  padding: 8px;
+  text-align: right;
+}
+
+.date-picker-calendar {
+  padding: 8px;
+}
+
+/* Add your custom styles for the calendar UI here */

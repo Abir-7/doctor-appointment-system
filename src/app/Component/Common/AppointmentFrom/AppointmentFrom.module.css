@@ -1,0 +1,44 @@
+.datePickerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.datePickerContainer label {
+  font-weight: 600;
+  color: rgb(81, 137, 243);
+}
+.datePickerContainer input {
+  padding: 5px;
+  border: 1px solid #4093ff;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(81, 137, 243);
+  transition: all 0.5s;
+}
+.datePickerContainer input:focus {
+  outline: 1px solid rgb(81, 127, 214);
+}
+
+.datePickerContainer input::placeholder {
+  color: rgb(165, 192, 241);
+}
+
+/* Example pseudo-element styling */
+.datePickerContainer
+  input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  font-size: 20px;
+  filter: invert(1) brightness(50%) sepia(100%) saturate(2000%)
+    hue-rotate(202deg);
+}
+
+
+.datePickerContainer select{
+ color: #4093ff;
+  border: 1px solid #4093ff;
+}
+.datePickerContainer select:focus{
+
+  outline: 1px solid #4093ff;
+}
+
