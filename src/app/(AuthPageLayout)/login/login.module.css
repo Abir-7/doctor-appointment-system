@@ -1,0 +1,8 @@
+
+.input{
+  display: grid;
+}
+
+    .input input::placeholder {
+        color: rgb(165, 192, 241);
+    }

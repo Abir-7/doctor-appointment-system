@@ -45,7 +45,7 @@ const AppointmentFrom: React.FC = () => {
     <div className="w-full p-1">
       <form onSubmit={handleSubmit}>
         <div className="flex justify-between flex-wrap w-full gap-2 lg:gap-20">
-          <div className={`${styles.datePickerContainer} flex-shrink-0 md:w-[50%]`}>
+          <div className={`${styles.datePickerContainer} w-full flex-shrink-0 md:w-[50%]`}>
             <label htmlFor="firstName">First Name:</label>
             <div>
               <input
@@ -57,7 +57,7 @@ const AppointmentFrom: React.FC = () => {
               />
             </div>
           </div>
-          <div className={`${styles.datePickerContainer} flex-shrink-0 md:w-[40%]`}>
+          <div className={`${styles.datePickerContainer} w-full flex-shrink-0 md:w-[40%]`}>
             <label htmlFor="lastName">Last Name:</label>
             <div>
               <input
@@ -71,8 +71,8 @@ const AppointmentFrom: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex justify-between w-full gap-20 mt-2">
-          <div className={`${styles.datePickerContainer} w-full`}>
+        <div className="flex justify-between flex-wrap w-full gap-2 lg:gap-20">
+          <div className={`${styles.datePickerContainer} flex-shrink-0 w-full md:w-[50%]`}>
             <label htmlFor="address">Address:</label>
             <div>
               <input
@@ -84,7 +84,7 @@ const AppointmentFrom: React.FC = () => {
               />
             </div>
           </div>
-          <div className={`${styles.datePickerContainer} flex-shrink-0`}>
+          <div className={`${styles.datePickerContainer} flex-shrink-0 w-full md:w-[40%]`}>
             <label htmlFor="mobile">Mobile:</label>
             <div>
               <input

@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${inter.className} max-w-[2000px] mx-auto `}>
 
         <div className="min-h-[80vh] ">{children}</div>
-        <div className="h-[200px] bg-blue-500">Footer</div>
+    
       </body>
     </html>
   );
