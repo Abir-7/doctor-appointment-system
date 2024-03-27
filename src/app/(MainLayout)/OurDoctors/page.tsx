@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import React from "react";
 
@@ -27,7 +28,6 @@ const AllDoctorPage = () => {
         </div>
       </div>
 )}
-
     </div>
   );
 };

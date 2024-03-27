@@ -2,6 +2,7 @@ import React from 'react'
 import img1 from '../../asset/AuthPage/5500661.jpg'
 import Image from 'next/image'
 import styels from './login.module.css'
+import Link from 'next/link'
 const LoginPage = () => {
   return (
     <div className='mx-auto p-1 grid container   md:grid-cols-2 place-items-center h-screen   md:gap-10'>
@@ -23,6 +24,7 @@ const LoginPage = () => {
                     <input className='bg-blue-500 text-white  w-[250px] p-2 rounded-md focus:outline-blue-300 ' type="submit" value={'Login'} />
                 </div>
             </form>
+            <Link href={'/signup'}>Signup</Link>
         </div>
     </div>
   )
