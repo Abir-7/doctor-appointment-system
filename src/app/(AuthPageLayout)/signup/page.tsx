@@ -16,6 +16,7 @@ interface FormData {
 }
 
 const SignupPage: React.FC = () => {
+  const [err,setErr]=useState<any>('')
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -47,6 +48,7 @@ else{
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setErr('')
     //console.log(formData);
     // Add logic to submit the form
     try {
@@ -60,21 +62,23 @@ else{
 
       if (!response.ok) {
         if (response.status == 409) {
-          throw new Error(`Email already exist`);
+          setErr('Email already exist')
         }
-        if (response.status == 403) {
-          throw new Error(`Password not matched`);
+        else if (response.status == 403) {
+          setErr('Password not matched')
         }
-        throw new Error(`Failed to sign up`);
+    else  {  setErr('Failed to sign up. Try again...')}
+        //throw new Error(`Failed to sign up`);
       }
 
       if (response.status == 200) {
         console.log('hit')
-      router.push('http://localhost:3000/login')
+        router.push('http://localhost:3000/login')
       }
 
-    } catch (error) {
+    } catch (error:any) {
       console.error("Error signing up:", error);
+  
     }
   };
 
@@ -149,7 +153,7 @@ else{
             </label>
             <input
               placeholder="Your Mobile Number"
-              type="tel"
+              type="number"
               name="mobile"
               value={formData.mobile}
               onChange={handleChange}
@@ -192,6 +196,9 @@ else{
             />
           </div>
           {/* Link to login page */}
+          {err&&  <p className=" text-red-500 text-center mt-3 text-sm">
+           {err}
+          </p>}
           <p className="text-center mt-3 text-sm">
             Already have an account??{" "}
             <Link
