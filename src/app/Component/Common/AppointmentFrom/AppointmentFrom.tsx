@@ -37,7 +37,6 @@ const AppointmentFrom: React.FC = () => {
     console.log(formData);
   };
 
-  console.log(formData);
   
   const doctors = ["Dr. Smith", "Dr. Johnson", "Dr. Williams"]; // Define list of doctors
 

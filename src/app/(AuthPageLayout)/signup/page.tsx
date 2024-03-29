@@ -27,11 +27,21 @@ const SignupPage: React.FC = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+if(name=='mobile'){
+  const number=value
+  setFormData({
+    ...formData,
+    [name]: number.toString(),
+  });
+}
+else{
+  setFormData({
+    ...formData,
+    [name]: value,
+  });
+}
   };
+  console.log(formData)
 
   const router = useRouter();
 

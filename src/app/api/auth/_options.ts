@@ -1,39 +1,62 @@
-import UserModel from "@/MongooseModels/UserModel"
-import CredentialsProvider from "next-auth/providers/credentials"
-import bcrypt from 'bcrypt';
+import UserModel from "@/MongooseModels/UserModel";
+import CredentialsProvider from "next-auth/providers/credentials";
+import bcrypt from "bcrypt";
 import { NextAuthOptions } from "next-auth";
-export const authOptions:NextAuthOptions = {
-    // Configure one or more authentication providers
-    providers: [
-        CredentialsProvider({
-            // The name to display on the sign in form (e.g. "Sign in with...")
-            name: "Credentials",
-            // `credentials` is used to generate a form on the sign in page.
-            // You can specify which fields should be submitted, by adding keys to the `credentials` object.
-            // e.g. domain, username, password, 2FA token, etc.
-            // You can pass any HTML attribute to the <input> tag through the object.
-            credentials: {
-              email: { label: "Email", type: "email", placeholder: "Your Email" },
-              password: { label: "Password", type: "password",placeholder: "Your Password" }
-            },
-            async authorize(credentials, req) {
-           if(!credentials?.email || !credentials.password) return null
-       
-           const userExist=await UserModel.findOne({email:credentials.email})
-           if(!userExist) return null
+import connectDB from "@/lib/Database/Connection";
 
-          const passMatch = await bcrypt.compare(credentials.password,userExist.hashedPassword)
-        
-           return passMatch? userExist : null
+export const authOptions: NextAuthOptions = {
 
-            }
-           
-          })
-    ],
-    // callbacks: {
-    //   async signIn({ user, account }) {
-    //     return user;
-    //   },
-    // },
-  
-  }
+  providers: [
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        email: { label: "Email", type: "email", placeholder: "Your Email" },
+        password: {
+          label: "Password",
+          type: "password",
+          placeholder: "Your Password",
+        },
+      },
+      async authorize(credentials, req) {
+        //  console.log(credentials,'gg')
+        try {
+          if (!credentials?.email || !credentials.password)
+            throw new Error("Password not match");
+
+          await connectDB(); // db connection
+
+          const userExist = await UserModel.findOne({
+            email: credentials.email,
+          });
+
+          // console.log(credentials,userExist)
+
+          if (!userExist) throw new Error("Email not found");
+
+          const passMatch = await bcrypt.compare(
+            credentials.password,
+            userExist.password
+          );
+
+         // console.log(userExist);
+
+          if (!passMatch) throw new Error("Password not matched");
+
+            const data:any= {name:userExist.firstName+' '+userExist.lastName,email:userExist.email,image:'',role:'user'}
+
+          return data ;
+
+        } catch (error) {
+          throw new Error(`${error}`);
+        }
+      },
+    }),
+  ],
+  pages: {
+    signIn: "/login",
+  },
+  // session: {
+  //   // Set custom expiration time for sessions
+  //   maxAge: 30, // 2 minutes in seconds
+  // }
+};

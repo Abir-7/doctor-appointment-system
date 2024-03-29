@@ -5,6 +5,7 @@ import connectDB from "@/lib/Database/Connection";
 
 
 
+
 export async function GET(req: NextRequest) {
   return NextResponse.json([
     { name: "abir", role: "admin" },
@@ -18,7 +19,7 @@ export async function POST(req: NextRequest) {
     await connectDB();
 
     const body = await req.json();
-
+ console.log(body,'ggggggggggg')
     if (body.password !== body.confirmPassword) {
       return NextResponse.json(
         { data: "", err: "password not match" },
@@ -29,19 +30,24 @@ export async function POST(req: NextRequest) {
     const findUser = await UserModel.findOne({ email: body.email });
 
     if (findUser)
-      return NextResponse.json(
+{      return NextResponse.json(
         { data: "", err: "already exist" },
         { status: 409 }
-      );
+      );}
 
     const hashedPassword = await bcrypt.hash(body.password, 10);
-    const data = { ...body, password: hashedPassword};
+    const data = { ...body, password: hashedPassword,image:'',role:'user'};
 
-    const newUser = new UserModel(data);
-    await newUser.save();
+     const newUser = new UserModel(data);
+     await newUser.save();
 
     return NextResponse.json({ data: body, err: "" }, { status: 200 });
+
   } catch (error) {
-    console.log(error);
+console.log(error)
+return NextResponse.json(
+  { data: "", err: "Internal Server Error" },
+  { status: 500 }
+);
   }
 }

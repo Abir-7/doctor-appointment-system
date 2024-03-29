@@ -4,6 +4,7 @@ import { IoMdMenu } from "react-icons/io";
 import NavLinks from "./NavLinks";
 import styles from "./Navbar.module.css";
 import LoginButtton from "./LoginButtton";
+
 const Navbar = () => {
   const navAction = () => {
     const mobileNav = document.getElementById("mobileNavLink");
@@ -28,7 +29,9 @@ const Navbar = () => {
     };
   }, []);
 
-  console.log(scrollY);
+
+
+
   return (
     <div
       id="navbar"
