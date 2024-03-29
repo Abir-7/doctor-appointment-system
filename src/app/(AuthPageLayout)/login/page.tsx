@@ -20,11 +20,13 @@ const LoginPage = () => {
                     <label htmlFor="password" className='text-blue-500 text-lg font-medium'>Password:</label>
                     <input type="email" placeholder='Your Password'  className='border border-blue-300 p-2 rounded-md focus:outline-blue-300' required/>
                 </div>
-                <div className='w-full flex justify-center mt-4'>
-                    <input className='bg-blue-500 text-white  w-[250px] p-2 rounded-md focus:outline-blue-300 ' type="submit" value={'Login'} />
+                <p className='text-center mt-3 text-sm'>Don't have an account?? <Link href={'/signup'} className='text-blue-500  hover:underline underline-offset-2'>Click here</Link></p>
+                <div className='w-full flex justify-center mt-3'>
+                    
+                    <input className='bg-blue-500 text-white  w-[250px] p-2 rounded-md  hover:bg-blue-600 duration-500   ' type="submit" value={'Login'} />
                 </div>
             </form>
-            <Link href={'/signup'}>Signup</Link>
+           
         </div>
     </div>
   )
