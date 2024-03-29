@@ -1,7 +1,8 @@
 import UserModel from "@/MongooseModels/UserModel"
 import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from 'bcrypt';
-export const authOptions = {
+import { NextAuthOptions } from "next-auth";
+export const authOptions:NextAuthOptions = {
     // Configure one or more authentication providers
     providers: [
         CredentialsProvider({
@@ -29,4 +30,10 @@ export const authOptions = {
            
           })
     ],
+    // callbacks: {
+    //   async signIn({ user, account }) {
+    //     return user;
+    //   },
+    // },
+  
   }

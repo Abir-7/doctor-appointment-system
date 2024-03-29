@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import UserModel from "@/MongooseModels/UserModel";
 import connectDB from "@/lib/Database/Connection";
+
+
+
 export async function GET(req: NextRequest) {
   return NextResponse.json([
     { name: "abir", role: "admin" },
