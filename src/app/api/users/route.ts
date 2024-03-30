@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
     }
 
     const hashedPassword = await bcrypt.hash(body.password, 10);
-    const data = { ...body, password: hashedPassword, image: "", role: "user" };
+    const data = { ...body, password: hashedPassword, role: "user" };
 
     const newUser = new UserModel(data);
     await newUser.save();

@@ -4,9 +4,14 @@ import React, { useEffect } from "react";
 
 interface NavbarProps {
   navAction: () => void;
+  userLoading:boolean,
+  isVerified:boolean
+  role:string
 }
 
-const NavLinks = ({ navAction }: NavbarProps) => {
+
+
+const NavLinks = ({ navAction,userLoading,isVerified ,role}: NavbarProps) => {
   return (
     <>
       <li
@@ -31,7 +36,18 @@ const NavLinks = ({ navAction }: NavbarProps) => {
         onClick={navAction}
         className="hover:bg-white  px-3 py-1 duration-300 rounded-md hover:text-blue-500 text-white"
       >
-        <Link href={"/AdminDashboard"}>Dashboard</Link>
+        {
+          (isVerified && role=='admin')&&
+          <Link href={"/AdminDashboard"}>Dashboard</Link>
+          }
+            {
+          (isVerified && role=='doctor')&&
+          <Link href={"/DoctorDashboard"}>Dashboard</Link>
+          }
+                  {
+          (isVerified && role=='user')&&
+          <Link href={"/PatientDashboard"}>Dashboard</Link>
+          }
       </li>
     </>
   );

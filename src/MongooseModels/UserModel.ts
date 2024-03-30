@@ -9,7 +9,8 @@ const userSchema = new Schema({
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
   image:{ type: String, required: false },
-  role:{ type: String, required: true }
+  role:{ type: String, required: true },
+  specialist: { type: String, required: false },
 });
 
 const UserModel = mongoose.models.Users || mongoose.model("Users", userSchema);

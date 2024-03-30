@@ -1,16 +1,18 @@
 'use client'
 
-import { RootState } from '@/lib/redux/store'
-import { signOut, useSession } from 'next-auth/react'
+import { signOut} from 'next-auth/react'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
 
 
-const LoginButtton = () => {
-  const {email,firstName,lastName,mobile,role,userLoading,isVerified} = useSelector((state: RootState) => state.userInfo)
+interface Props{
+  userLoading:boolean,
+  isVerified:boolean
+}
 
-  console.log(email,firstName,lastName,mobile,role)
+const LoginButtton = ({userLoading,isVerified}:Props) => {
+
+
 
 
   if(userLoading==true){

@@ -27,7 +27,7 @@ const InfoProvider = ({
                     const response = await fetch(`http://localhost:3000/api/users/${session.user?.email}`);
                     const data = await response.json();
                     console.log(data);
-                    dispatch(addUserData({email:data.email,firstName:data.firstName,lastName:data.lastName,mobile:data.mobile,role:data.role}))
+                    dispatch(addUserData({email:data.email,firstName:data.firstName,lastName:data.lastName,mobile:data.mobile,role:data.role,specialist:data?.specialist?data.specialist:''}))
 
                 } catch (error) {
                     console.error('Error fetching data:', error);

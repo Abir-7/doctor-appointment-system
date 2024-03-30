@@ -50,12 +50,12 @@ const PatientsSays = () => {
             <div className="text-center my-3">
               <h1 className="text-2xl font-bold mb-4">Name</h1>
               <p className="">
-                <span className="text-xl font-bold">`&quot;`</span> Lorem ipsum dolor,
+                <span className="text-xl font-medium">&quot;</span> Lorem ipsum dolor,
                 sit amet consectetur adipisicing elit. Culpa veritatis, omnis
                 dolores voluptate officiis deleniti aliquid repellat aspernatur
                 earum magnam perferendis. Ullam ipsam laboriosam natus non sint!
                 Fuga, facere voluptate...
-                <span className="text-xl font-bold">`&quot;`</span>
+                <span className="text-xl font-medium">&quot;</span>
               </p>
             </div>
           </div>
@@ -73,12 +73,12 @@ const PatientsSays = () => {
             <div className="text-center my-3">
               <h1 className="text-2xl font-bold mb-4">Name</h1>
               <p className="">
-                <span className="text-xl font-bold">`&quot;`</span> Lorem ipsum dolor,
+                <span className="text-xl font-medium">&quot;</span> Lorem ipsum dolor,
                 sit amet consectetur adipisicing elit. Culpa veritatis, omnis
                 dolores voluptate officiis deleniti aliquid repellat aspernatur
                 earum magnam perferendis. Ullam ipsam laboriosam natus non sint!
                 Fuga, facere voluptate...
-                <span className="text-xl font-bold">`&quot;`</span>
+                <span className="text-xl font-medium">&quot;</span>
               </p>
             </div>
           </div>
@@ -96,12 +96,12 @@ const PatientsSays = () => {
             <div className="text-center my-3">
               <h1 className="text-2xl font-bold mb-4">Name</h1>
               <p className="">
-                <span className="text-xl font-bold">`&quot;`</span> Lorem ipsum dolor,
+                <span className="text-xl font-medium">&quot;</span> Lorem ipsum dolor,
                 sit amet consectetur adipisicing elit. Culpa veritatis, omnis
                 dolores voluptate officiis deleniti aliquid repellat aspernatur
                 earum magnam perferendis. Ullam ipsam laboriosam natus non sint!
                 Fuga, facere voluptate...
-                <span className="text-xl font-bold">`&quot;`</span>
+                <span className="text-xl font-medium">&quot;</span>
               </p>
             </div>
           </div>
@@ -119,12 +119,12 @@ const PatientsSays = () => {
             <div className="text-center my-3">
               <h1 className="text-2xl font-bold mb-4">Name</h1>
               <p className="">
-                <span className="text-xl font-bold">`&quot;`</span> Lorem ipsum dolor,
+                <span className="text-xl font-medium">&quot;</span> Lorem ipsum dolor,
                 sit amet consectetur adipisicing elit. Culpa veritatis, omnis
                 dolores voluptate officiis deleniti aliquid repellat aspernatur
                 earum magnam perferendis. Ullam ipsam laboriosam natus non sint!
                 Fuga, facere voluptate...
-                <span className="text-xl font-bold">`&quot;`</span>
+                <span className="text-xl font-medium">&quot;</span>
               </p>
             </div>
           </div>
@@ -142,12 +142,12 @@ const PatientsSays = () => {
             <div className="text-center my-3">
               <h1 className="text-2xl font-bold mb-4">Name</h1>
               <p className="">
-                <span className="text-xl font-bold">`&quot;`</span> Lorem ipsum dolor,
+                <span className="text-xl font-medium">&quot;</span> Lorem ipsum dolor,
                 sit amet consectetur adipisicing elit. Culpa veritatis, omnis
                 dolores voluptate officiis deleniti aliquid repellat aspernatur
                 earum magnam perferendis. Ullam ipsam laboriosam natus non sint!
                 Fuga, facere voluptate...
-                <span className="text-xl font-bold">`&quot;`</span>
+                <span className="text-xl font-medium">&quot;</span>
               </p>
             </div>
           </div>

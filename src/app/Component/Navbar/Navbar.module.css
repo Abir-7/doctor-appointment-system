@@ -2,8 +2,6 @@
   position: sticky;
   top: -50px;
   animation: stickyNavbar .5s linear forwards;
-  z-index: 20;
-
 }
 
 @keyframes stickyNavbar {

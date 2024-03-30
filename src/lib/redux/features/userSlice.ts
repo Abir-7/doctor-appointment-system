@@ -9,6 +9,7 @@ export interface UserState {
   role: string;
   isVerified: boolean;
   userLoading: boolean;
+  specialist:string;
 }
 
 export interface PayloadType {
@@ -17,6 +18,7 @@ export interface PayloadType {
     lastName: string;
     mobile: string | number;
     role: string;
+    specialist:string;
   }
 
 const initialState: UserState = {
@@ -25,6 +27,7 @@ const initialState: UserState = {
   lastName: "",
   mobile: "",
   role: "",
+  specialist:'',
   isVerified: false,
   userLoading: true,
 };
@@ -39,6 +42,7 @@ export const userSlice = createSlice({
       state.lastName = action.payload.lastName;
       state.mobile = action.payload.mobile;
       state.role = action.payload.role;
+      state.specialist = action.payload.specialist;
     },
     removeUserData: (state) => {
       state.email = "";
@@ -46,6 +50,7 @@ export const userSlice = createSlice({
       state.lastName = "";
       state.mobile = "";
       state.role = "";
+      state.specialist='';
     },
     setUserLoading:(state, action: PayloadAction<boolean>)=>{
        state.userLoading=action.payload
