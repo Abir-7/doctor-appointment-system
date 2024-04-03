@@ -1,0 +1,20 @@
+
+
+
+
+@media screen and (max-width: 696px) {
+  .dashboardContainer {
+    position: relative;
+  }
+  .sideNav{
+    position: absolute;
+    z-index: 2;
+    background: white;
+    transition: all 0.5s;
+    left: -100%;
+  }
+  .sideNav.active {
+    position: absolute;
+    left: 0%;
+  }
+}

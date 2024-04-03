@@ -38,15 +38,15 @@ const NavLinks = ({ navAction,userLoading,isVerified ,role}: NavbarProps) => {
       >
         {
           (isVerified && role=='admin')&&
-          <Link href={"/AdminDashboard"}>Dashboard</Link>
+          <Link href={"/admin/AdminDashboard"}>Dashboard</Link>
           }
             {
           (isVerified && role=='doctor')&&
-          <Link href={"/DoctorDashboard"}>Dashboard</Link>
+          <Link href={"/doctor/DoctorDashboard"}>Dashboard</Link>
           }
                   {
           (isVerified && role=='user')&&
-          <Link href={"/PatientDashboard"}>Dashboard</Link>
+          <Link href={"/patient/PatientDashboard"}>Dashboard</Link>
           }
       </li>
     </>

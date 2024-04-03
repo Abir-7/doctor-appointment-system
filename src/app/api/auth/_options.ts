@@ -42,7 +42,7 @@ export const authOptions: NextAuthOptions = {
 
           if (!passMatch) throw new Error("Password not matched");
 
-            const data:any= {name:userExist.firstName+' '+userExist.lastName,email:userExist.email,image:'',role:'user'}
+            const data:any= {name:userExist.firstName+' '+userExist.lastName,email:userExist.email,image:'',role:userExist.role}
 
           return data ;
 
@@ -55,8 +55,19 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: "/login",
   },
-  // session: {
-  //   // Set custom expiration time for sessions
-  //   maxAge: 30, // 2 minutes in seconds
-  // }
+  callbacks: {
+    async jwt({ token, user }:{token:any,user:any}) {
+      if (user) {
+        token.role = user.role
+      }
+      return token;
+    },
+    async session({ session, token }:{session:any,token:any}) {
+      if (session?.user) {
+        console.log(token,'toek2n')
+        session.user.role = token.role
+      }
+      return session;
+    },
+  },
 };

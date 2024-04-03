@@ -1,0 +1,14 @@
+.paymentlistContainer{
+overflow-y: auto;
+height: calc(100% - 40px);
+}
+.paymentlistContainer::-webkit-scrollbar{
+    width: 5px;
+    
+    background-color: rgb(132, 169, 250);
+}
+.paymentlistContainer::-webkit-scrollbar-thumb{
+ 
+    
+    background-color: rgb(65, 83, 241);
+}

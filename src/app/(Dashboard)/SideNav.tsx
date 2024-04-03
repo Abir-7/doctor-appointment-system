@@ -3,10 +3,9 @@ import { RootState } from "@/lib/redux/store";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import DoctorSidenavLink from "./Doctor_Component/DoctorSidenavLink";
-import PatientSidenavLink from "./Patient_Component/PatientSidenavLink";
-import AdminSidenavLink from "./Admin_Component/AdminSidenavLink";
-
+import DoctorSidenavLink from "../Component/Dashboard/Doctor_Component/DoctorSidenavLink";
+import PatientSidenavLink from "../Component/Dashboard/Patient_Component/PatientSidenavLink";
+import AdminSidenavLink from "../Component/Dashboard/Admin_Component/AdminSidenavLink";
 const SideNav = () => {
   const [value, setvalue] = useState(0);
 
@@ -22,6 +21,7 @@ const SideNav = () => {
   } = useSelector((state: RootState) => state.userInfo);
 
   return (
+
     <div className="w-full">
       <div className="w-32 mt-3 mx-auto rounded-full bg-red-400 h-32"></div>
       <div className="text-center mt-2">
@@ -72,6 +72,7 @@ const SideNav = () => {
         )}
       </div>
     </div>
+
   );
 };
 

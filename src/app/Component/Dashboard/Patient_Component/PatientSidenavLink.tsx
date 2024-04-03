@@ -16,7 +16,7 @@ const PatientSidenavLink = ({setvalue,value}:Props) => {
           ? `w-full border border-blue-100 py-2 rounded-md px-5 bg-blue-500 text-white`
           : `w-full border border-blue-100 py-2 rounded-md px-5`
       }
-      href={"/PatientDashboard"}
+      href={"/patient/PatientDashboard"}
     >
       Patient Dashboard
     </Link>
@@ -28,9 +28,9 @@ const PatientSidenavLink = ({setvalue,value}:Props) => {
           ? `w-full border border-blue-100 py-2 rounded-md px-5 bg-blue-500 text-white`
           : `w-full border border-blue-100 py-2 rounded-md px-5`
       }
-      href={"#"}
+      href={"/patient/PaymentHistory"}
     >
-      Home
+      Payment History
     </Link>
 
     <Link

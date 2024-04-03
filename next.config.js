@@ -13,4 +13,8 @@ module.exports = {
         },
       ],
     },
+    serverRuntimeConfig: {
+      // Other server runtime configs...
+      middleware: ['./app/middleware.ts'],
+    }
   }

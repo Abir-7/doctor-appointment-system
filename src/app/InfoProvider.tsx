@@ -12,6 +12,8 @@ const InfoProvider = ({
 
     const {data:session,status}=useSession()
 
+    console.log(session,'session')
+
     const dispatch=useDispatch()
 
     useEffect(()=>{
