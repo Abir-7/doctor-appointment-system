@@ -1,26 +1,28 @@
-import React from 'react'
 import Image from "next/image";
-const AppointmentHistory = () => {
-    const data = [
-        { patientName: 'Md.Tazwarul Islam Abir', specialist: 'file', mobile: '123-456-7890', visitFee: '$150' },
-        { patientName: 'Jane', specialist: 'file', mobile: '234-567-8901', visitFee: '$120' },
-        { patientName: 'Doe', specialist: 'file', mobile: '345-678-9012', visitFee: '$100' }
-      ];
+import React from "react";
+
+const page = () => {
+
+  const data = [
+    { patientName: 'Md.Tazwarul Islam Abir', doctorName:'Md. Abir' , specialist: 'Cardiologist', mobile: '123-456-7890', visitFee: '$150' },
+    { patientName: 'Jane',doctorName:'Md. Abir' ,specialist: 'Dermatologist', mobile: '234-567-8901', visitFee: '$120' },
+    { patientName: 'Doe',doctorName:'Md. Abir' ,specialist: 'Pediatrician', mobile: '345-678-9012', visitFee: '$100' }
+  ];
+
   return (
     <div className="p-3 h-full">
-   <h1 className="text-xl rounded-md  font-bold text-center mb-2 text-white bg-blue-500 p-2">
-               Payment Info{" "}
-              </h1>
+      <h1 className="text-xl rounded-md  font-bold text-center mb-2 text-white bg-blue-500 p-2">
+        Appointment History{" "}
+      </h1>
       <hr />
 
-
-
-     <div className="w-full overflow-x-auto">
+      <div className="w-full overflow-x-auto">
      <table className="table-fixed  w-full border-collapse border text-center text-nowrap">
         <thead>
           <tr className=" border h-10 text-blue-500">
-            <th className="border border-blue-500 px-2">Name</th>
-            <th className="border border-blue-500 px-2">Prescription</th>
+            <th className="border border-blue-500 px-2">Patient</th>
+            <th className="border border-blue-500 px-2">Doctor</th>
+            <th className="border border-blue-500 px-2">Specialist</th>
             <th className="border border-blue-500 px-2">Mobile</th>
             <th className="border border-blue-500 px-2">Visit Fee</th>
           </tr>
@@ -47,6 +49,7 @@ const AppointmentHistory = () => {
                 {person.patientName}
                 </div>
        </td>
+       <td className="border px-2">{person.doctorName}</td>
               <td className="border px-2">{person.specialist}</td>
               <td className="border px-2">{person.mobile}</td>
               <td className="border px-2 font-bold">{person.visitFee}</td>
@@ -55,8 +58,9 @@ const AppointmentHistory = () => {
         </tbody>
       </table>
      </div>
+      
     </div>
-  )
-}
+  );
+};
 
-export default AppointmentHistory
+export default page;

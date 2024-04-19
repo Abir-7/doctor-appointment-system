@@ -4,9 +4,9 @@ import styles from "./PaymentlistContainer.module.css";
 import Image from "next/image";
 const PaymentHistoryPatient = () => {
   const data = [
-    { name: 'Md.Tazwarul Islam Abir', specialist: 'Cardiologist', mobile: '123-456-7890', visitFee: '$150' },
-    { name: 'Jane', specialist: 'Dermatologist', mobile: '234-567-8901', visitFee: '$120' },
-    { name: 'Doe', specialist: 'Pediatrician', mobile: '345-678-9012', visitFee: '$100' }
+    { doctorName: 'Md.Tazwarul Islam Abir', specialist: 'Cardiologist', mobile: '123-456-7890', visitFee: '$150' },
+    { doctorName: 'Jane', specialist: 'Dermatologist', mobile: '234-567-8901', visitFee: '$120' },
+    { doctorName: 'Doe', specialist: 'Pediatrician', mobile: '345-678-9012', visitFee: '$100' }
   ];
   
 
@@ -48,7 +48,7 @@ const PaymentHistoryPatient = () => {
                 ></Image>
               </div>
                 
-                {person.name}
+                {person.doctorName}
                 </div>
        </td>
               <td className="border px-2">{person.specialist}</td>

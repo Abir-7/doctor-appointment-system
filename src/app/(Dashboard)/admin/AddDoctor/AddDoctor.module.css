@@ -1,0 +1,10 @@
+.customFileInput::-webkit-file-upload-button{
+    border: 1px solid rgb(59, 130, 246);
+    border-radius: 4px;
+    color: rgb(32, 108, 230);
+    font-weight: 500;
+}
+
+.customFileInput{
+    color: rgb(35, 97, 196);
+}

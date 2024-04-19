@@ -1,4 +1,4 @@
-import DoughnutChart from "@/app/Component/Dashboard/Doctor_Component/DoughnutChart";
+import DoughnutChart from "@/app/(Dashboard)/doctor/DoctorDashboard/DoughnutChart";
 import React from "react";
 
 import NextPatient from "./NextPatient";
